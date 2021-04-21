@@ -19,10 +19,10 @@ run this command below in source folder
 ### Security.Policy
 
 ```java
-> grant codeBase "file:/root/ManageComputers/\*" {
-> permission java.io.FilePermission "/root/assign1Data", "read,write";
-> };
-> grant codeBase "file:/root/ManageComputers/\*" {
-    permission java.io.FilePermission "/root/assign1Data/*", "read,write,delete";
+grant codeBase "file:/root/ManageComputers/\*" {
+    permission java.io.FilePermission "/root/assign1Data", "read,write";
 };
+grant codeBase "file:/root/ManageComputers/\*" {
+    permission java.io.FilePermission "/root/assign1Data/*", "read,write,delete";
+;
 ```
