@@ -2,7 +2,7 @@
 
 ## What project is it?
 
-> This is a console-based (text-based) Java application that I did in the third semester of college <a href="https://www.sait.ca/programs-and-courses/diplomas/information-technology" target='_blank'>(SAIT)</a>. This application includes several ways to **_enhance Java security_**.
+> This is a console-based (text-based) Java application that I did in the fourth semester of college <a href="https://www.sait.ca/programs-and-courses/diplomas/information-technology" target='_blank'>(SAIT)</a>. This application includes several ways to **_enhance Java security_**.
 
 ## What is the purpose of the project?
 
