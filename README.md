@@ -11,12 +11,12 @@
 ## Keynote (General Requirements)
 
 - No subclassing allowed (code reuse is to be done via composition)
-- Classes can only be instantiated using static constructor methods, e.g. getInstance(). Normal constructors must be declared as private
-- Objects must be immutable (editing an object means replacing it with a new instance)
-- User input to the application must be validated. It must not be possible to store invalid attribute values in objects used in the system. Attempting to do so should display an error on-screen, and redisplay the menu to the user
-- The application must run under the supervision of a SecurityManager with an appropriate policy file to allow data saving and loading
-- The BaseComputer, LaptopComputer and DesktopComputer classes must be accessed from a sealed .jar file called Domain.jar when the application is run
-- Exceptions must be sanitized of sensitive data, e.g. file names and paths
+- Classes are only instantiated using static constructor methods, e.g. getInstance(). Normal constructors are declared as private.
+- Objects are immutable (editing an object means replacing it with a new instance)
+- User input to the application are validated. It is not possible to store invalid attribute values in objects used in the system. Attempting to do so display an error on-screen, and redisplay the menu to the user
+- The application runs under the supervision of a SecurityManager with an appropriate policy file to allow data saving and loading
+- The BaseComputer, LaptopComputer and DesktopComputer classes are accessed from a sealed .jar file called Domain.jar when the application is run
+- Exceptions are sanitized of sensitive data, e.g. file names and paths
 
 ## Functionality
 
@@ -31,19 +31,17 @@
 
 ## Menu
 
-| No  | Menu   | Note                                                                                                                                                                                           |
-| :-: | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  1  | Load   | Load computer data from drive. It will load the data for those computers into memory, replacing any computer data that was already in memory with the data loaded from the drive.              |
-|  2  | Save   | Save computer data to a drive. It will save copies of the data for each computer (held in memory) in separate serialized data files on the drive                                               |
-|  3  | List   | Listing the computers. In the event that there is data for a computer(s) in the system then it should display. The computers are numbered based upon the order they were stored in the system. |
-|  4  | Add    | Add a computer. The prompts show the only valid options for each item, e.g. CPU’s can only be “i5” or “i7”, etc. Any other values should be rejected and an error message displayed.           |
-|  5  | Delete | Delete an existing computer. Enter the number of the computer to delete as shown in the computer listing (by entering “1”)                                                                     |
-|  6  | Edit   | Edit the data for an existing computer. Enter the number of the computer to edit as shown in the computer listing (by entering “1”)                                                            |
-|  7  | Exit   | It terminates the application and drops the user back to the command prompt. Exiting from the application should not auto-save any unsaved computer data in memory.                            |
+| No  | Menu   | Note                                                                                                                                                                                     |
+| :-: | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  1  | Load   | Load computer data from drive. It will load the data for those computers into memory, replacing any computer data that was already in memory with the data loaded from the drive.        |
+|  2  | Save   | Save computer data to a drive. It will save copies of the data for each computer (held in memory) in separate serialized data files on the drive                                         |
+|  3  | List   | Listing the computers. In the event that there is data for a computer(s) in the system then it displays. The computers are numbered based upon the order they were stored in the system. |
+|  4  | Add    | Add a computer. The prompts show the only valid options for each item, e.g. CPU’s can only be “i5” or “i7”, etc. Any other values are rejected and an error message displayed.           |
+|  5  | Delete | Delete an existing computer. Enter the number of the computer to delete as shown in the computer listing (by entering “1”)                                                               |
+|  6  | Edit   | Edit the data for an existing computer. Enter the number of the computer to edit as shown in the computer listing (by entering “1”)                                                      |
+|  7  | Exit   | It terminates the application and drops the user back to the command prompt. Exiting from the application does not auto-save any unsaved computer data in memory.                        |
 
 ## Application Structure
-
-> The following files must exist in your solution:
 
 - ManageComputers.java: this contains the main() method for your application, and other methods as required:
 
